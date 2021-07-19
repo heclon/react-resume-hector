@@ -14,6 +14,12 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     justifyContent: "center",
   },
+  button: {
+    "&:hover": {
+      background: "white",
+      color: "black",
+    },
+  },
 }));
 
 function MyAppBar() {
@@ -25,13 +31,13 @@ function MyAppBar() {
         <Toolbar className={classes.toolbar}>
           <Grid container className={classes.grid} spacing={3}>
             <Grid item xs={4}>
-              <Button>Home</Button>
+              <Button className={classes.button}>About</Button>
             </Grid>
             <Grid item xs={4}>
-              <Button>Resume</Button>
+              <Button className={classes.button}>Resume</Button>
             </Grid>
             <Grid item xs={4}>
-              <Button>Portfolio</Button>
+              <Button className={classes.button}>Portfolio</Button>
             </Grid>
           </Grid>
         </Toolbar>

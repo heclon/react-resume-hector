@@ -6,11 +6,18 @@ import Card from "@material-ui/core/Card";
 import Grid from "@material-ui/core/Grid";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import SocialMediaBar from "../views/SocialMediaBar";
 
 const useStyles = makeStyles({
-  card: {
-    maxWidth: 400,
+  cardPersonal: {
+    minWidth: 500,
+    maxWidth: 550,
     borderRadius: "5%",
+  },
+  cardSocialMedia: {
+    minWidth: 400,
+    maxWidth: 400,
+    marginTop: 30,
   },
   grid: {
     minWidth: 500,
@@ -46,16 +53,23 @@ const PanelHeroImage = () => {
     <PanelHeroImageContainer image={backgroundImage}>
       <Grid container className={classes.grid}>
         <Grid item xs={12}>
-          <Card className={classes.card}>
+          <Card className={classes.cardPersonal}>
             <CardContent>
-              <Typography variant="h5" component="h2">
+              <Typography variant="h3" component="h3">
                 Hector Longarte
               </Typography>
-              <Typography className={classes.pos} color="textSecondary">
-                I am a normal guy, with a nonconventional engineering skillset ...
+              <Typography
+                variant="h5"
+                className={classes.pos}
+                color="textSecondary"
+              >
+                a headline will go here ...
               </Typography>
             </CardContent>
           </Card>
+        </Grid>
+        <Grid item xs={12}>
+          <SocialMediaBar />
         </Grid>
       </Grid>
     </PanelHeroImageContainer>

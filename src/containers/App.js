@@ -1,13 +1,17 @@
 import PanelHeroImage from "../components/background/PanelHeroImage";
 import React from "react";
 import MyAppBar from "../components/views/MyAppBar";
-import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+import {
+  createTheme,
+  ThemeProvider,
+  responsiveFontSizes,
+} from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 function App(props) {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-  const theme = React.useMemo(
+  let theme = React.useMemo(
     () =>
       createTheme({
         palette: {
@@ -22,6 +26,7 @@ function App(props) {
       }),
     [prefersDarkMode]
   );
+  theme = responsiveFontSizes(theme);
 
   return (
     <React.Fragment>
