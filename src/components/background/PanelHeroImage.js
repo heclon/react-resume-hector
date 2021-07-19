@@ -2,10 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import backgroundImage from "../../static/images/bg7.jpg";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
 import Grid from "@material-ui/core/Grid";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
+import PersonalCard from "../views/PersonalCard";
 import SocialMediaBar from "../views/SocialMediaBar";
 
 const useStyles = makeStyles({
@@ -53,20 +51,7 @@ const PanelHeroImage = () => {
     <PanelHeroImageContainer image={backgroundImage}>
       <Grid container className={classes.grid}>
         <Grid item xs={12}>
-          <Card className={classes.cardPersonal}>
-            <CardContent>
-              <Typography variant="h3" component="h3">
-                Hector Longarte
-              </Typography>
-              <Typography
-                variant="h5"
-                className={classes.pos}
-                color="textSecondary"
-              >
-                a headline will go here ...
-              </Typography>
-            </CardContent>
-          </Card>
+          <PersonalCard />
         </Grid>
         <Grid item xs={12}>
           <SocialMediaBar />
