@@ -6,13 +6,20 @@ import Grid from "@material-ui/core/Grid";
 import PersonalCard from "../card/PersonalCard";
 import SocialMediaBar from "../social/SocialMediaGrid";
 import Chevron from "../../static/cursor/arrow-213-24.ico";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles({
   grid: {
     minWidth: 500,
-    marginTop: 100,
+    marginTop: 150,
     flexDirection: "column",
     alignItems: "center",
+  },
+  button: {
+    "&:hover": {
+      background: "white",
+      color: "black",
+    },
   },
 });
 
@@ -37,6 +44,10 @@ const Header = () => {
   return (
     <PanelHeroImageContainer image={backgroundImage}>
       <Grid container className={classes.grid}>
+        <Grid item xs={6}>
+          <Button className={classes.button}>About</Button>
+          <Button className={classes.button}>Portfolio</Button>
+        </Grid>
         <Grid item xs={12}>
           <PersonalCard />
         </Grid>

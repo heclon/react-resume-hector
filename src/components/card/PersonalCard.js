@@ -8,11 +8,10 @@ const useStyles = makeStyles({
   cardPersonal: {
     background: "transparent",
     boxShadow: "none",
-    marginTop: 150,
+    marginTop: 10,
     minHeight: 50,
-    minWidth: 500,
-    maxWidth: 550,
-    borderRadius: "5%",
+    // minWidth: 500,
+    // maxWidth: 550,
   },
 });
 
@@ -22,11 +21,11 @@ const PersonalCard = () => {
   return (
     <Card className={classes.cardPersonal}>
       <CardContent>
-        <Typography variant="h2" component="h2">
+        <Typography variant="h1" component="h1">
           Hector Longarte
         </Typography>
         <Typography variant="h5" className={classes.pos} color="textSecondary">
-          Full-stack, Cloud and Financial engineer
+          Full-stack, Cloud and Financial Markets engineer. All in one.
         </Typography>
       </CardContent>
     </Card>

@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/header/Header";
-import MyAppBar from "../components/toolbar/MyAppBar";
+import Resume from "../components/resume/Resume";
+
 import {
   createTheme,
   ThemeProvider,
@@ -32,8 +33,8 @@ function App(props) {
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <MyAppBar />
         <Header />
+        <Resume />
       </ThemeProvider>
     </React.Fragment>
   );
