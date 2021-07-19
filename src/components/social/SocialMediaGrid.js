@@ -31,12 +31,21 @@ const SocialMediaBar = () => {
     <Grid container className={classes.grid}>
       <Grid item xs={4}>
         <Fab className={classes.fab}>
-          <LinkedIn />
+          <LinkedIn
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/hector-longarte/",
+                "_blank"
+              )
+            }
+          />
         </Fab>
       </Grid>
       <Grid item xs={4}>
         <Fab className={classes.fab}>
-          <GitHub />
+          <GitHub
+            onClick={() => window.open("https://github.com/heclon", "_blank")}
+          />
         </Fab>
       </Grid>
       <Grid item xs={4}>

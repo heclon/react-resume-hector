@@ -3,31 +3,16 @@ import styled from "styled-components";
 import backgroundImage from "../../static/images/bg7.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import PersonalCard from "../views/PersonalCard";
-import SocialMediaBar from "../views/SocialMediaBar";
+import PersonalCard from "../card/PersonalCard";
+import SocialMediaBar from "../social/SocialMediaGrid";
+import Chevron from "../../static/cursor/arrow-213-24.ico";
 
 const useStyles = makeStyles({
-  cardPersonal: {
-    minWidth: 500,
-    maxWidth: 550,
-    borderRadius: "5%",
-  },
-  cardSocialMedia: {
-    minWidth: 400,
-    maxWidth: 400,
-    marginTop: 30,
-  },
   grid: {
     minWidth: 500,
     marginTop: 100,
     flexDirection: "column",
     alignItems: "center",
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
   },
 });
 
@@ -43,9 +28,11 @@ const PanelHeroImageContainer = styled.div`
   -webkit-background-size: cover !important;
   text-align: center;
   display: inline-block;
+  cursor: url(${Chevron}) 30 30,auto;
+}
 `;
 
-const PanelHeroImage = () => {
+const Header = () => {
   const classes = useStyles();
   return (
     <PanelHeroImageContainer image={backgroundImage}>
@@ -61,4 +48,4 @@ const PanelHeroImage = () => {
   );
 };
 
-export default PanelHeroImage;
+export default Header;

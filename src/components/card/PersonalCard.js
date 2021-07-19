@@ -6,7 +6,10 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   cardPersonal: {
-    minHeight: 250,
+    background: "transparent",
+    boxShadow: "none",
+    marginTop: 150,
+    minHeight: 50,
     minWidth: 500,
     maxWidth: 550,
     borderRadius: "5%",
@@ -19,11 +22,11 @@ const PersonalCard = () => {
   return (
     <Card className={classes.cardPersonal}>
       <CardContent>
-        <Typography variant="h3" component="h3">
+        <Typography variant="h2" component="h2">
           Hector Longarte
         </Typography>
         <Typography variant="h5" className={classes.pos} color="textSecondary">
-          Much more than just an engineer
+          Full-stack, Cloud and Financial engineer
         </Typography>
       </CardContent>
     </Card>

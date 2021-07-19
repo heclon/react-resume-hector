@@ -1,6 +1,6 @@
-import PanelHeroImage from "../components/background/PanelHeroImage";
 import React from "react";
-import MyAppBar from "../components/views/MyAppBar";
+import Header from "../components/header/Header";
+import MyAppBar from "../components/toolbar/MyAppBar";
 import {
   createTheme,
   ThemeProvider,
@@ -33,7 +33,7 @@ function App(props) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <MyAppBar />
-        <PanelHeroImage />
+        <Header />
       </ThemeProvider>
     </React.Fragment>
   );
