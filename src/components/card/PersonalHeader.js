@@ -13,22 +13,27 @@ const useStyles = makeStyles({
     // minWidth: 500,
     // maxWidth: 550,
   },
+  title: {
+    fontWeight: "bold",
+    fontStyle: "",
+  },
 });
 
-const PersonalCard = () => {
+const PersonalCardHeader = () => {
   const classes = useStyles();
 
   return (
     <Card className={classes.cardPersonal}>
       <CardContent>
-        <Typography variant="h1" component="h1">
+        <Typography variant="h1" component="h1" className={classes.title}>
           Hector Longarte
         </Typography>
-        <Typography variant="h5" className={classes.pos} color="textSecondary">
-          Full-stack, Cloud and Financial Markets engineer. All in one.
+        <Typography variant="h3" className={classes.pos} color="textSecondary">
+          {/* Full-stack, Cloud and Financial Markets engineer. All in one. */}
+          Full-stack and Cloud engineer.
         </Typography>
       </CardContent>
     </Card>
   );
 };
-export default PersonalCard;
+export default PersonalCardHeader;

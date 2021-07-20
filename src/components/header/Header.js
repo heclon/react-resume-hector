@@ -3,7 +3,7 @@ import styled from "styled-components";
 import backgroundImage from "../../static/images/bg7.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import PersonalCard from "../card/PersonalCard";
+import PersonalCardHeader from "../card/PersonalHeader";
 import SocialMediaBar from "../social/SocialMediaGrid";
 import Chevron from "../../static/cursor/arrow-213-24.ico";
 import Button from "@material-ui/core/Button";
@@ -36,6 +36,7 @@ const PanelHeroImageContainer = styled.div`
   text-align: center;
   display: inline-block;
   cursor: url(${Chevron}) 30 30,auto;
+  overflow: hidden;
 }
 `;
 
@@ -49,7 +50,7 @@ const Header = () => {
           <Button className={classes.button}>Portfolio</Button>
         </Grid>
         <Grid item xs={12}>
-          <PersonalCard />
+          <PersonalCardHeader />
         </Grid>
         <Grid item xs={12}>
           <SocialMediaBar />
