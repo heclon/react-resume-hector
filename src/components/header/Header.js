@@ -42,10 +42,11 @@ const PanelHeroImageContainer = styled.div`
 `;
 
 const Header = ({references}) => {
-    const { aboutRef, techRef, portfolioRef } = references;
+    const { homeRef, aboutRef, techRef, portfolioRef } = references;
 
   const classes = useStyles();
   return (
+    <section ref={homeRef}>
     <PanelHeroImageContainer image={backgroundImage}>
       <Grid container className={classes.grid}>
         <Grid item xs={6}>
@@ -61,6 +62,7 @@ const Header = ({references}) => {
         </Grid>
       </Grid>
     </PanelHeroImageContainer>
+    </section>
   );
 };
 

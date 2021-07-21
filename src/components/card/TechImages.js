@@ -13,6 +13,7 @@ import javalogo from "../../static/images/java.svg";
 import pythonLogo from "../../static/images/python.svg";
 import gitLogo from "../../static/images/git.svg";
 import RLogo from "../../static/images/R.svg";
+import mandoH from "../../static/images/mandohelmet.jpg";
 
 const useStyles = makeStyles({
   gridHorizontal: {
@@ -86,13 +87,19 @@ function TechImages() {
         <ImageCard
           imagePath={RLogo}
           title="R"
-          text="Macro and quantitative analysis"
+          text="Shiny apps and portfolio analysis"
         />
 
         <ImageCard
           imagePath={pythonLogo}
           title="Python for finance"
-          text="Trading APIs and quantitative analysis"
+          text="Trading APIs and algorithms"
+        />
+
+        <ImageCard
+          imagePath={mandoH}
+          title="Quantitative Finance"
+          text="Investment strategies, Risk Manangement and Global macro-micro analysis"
         />
       </Container>
     </React.Fragment>

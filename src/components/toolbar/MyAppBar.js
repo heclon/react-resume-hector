@@ -1,4 +1,4 @@
-import React,{ useRef, useEffect } from "react";
+import React from "react";
 import Button from "@material-ui/core/Button";
 import { AppBar } from "@material-ui/core";
 import Toolbar from "./Toolbar";
@@ -8,14 +8,17 @@ import scrollTo from "../../util/scrollTo";
 
 const useStyles = makeStyles((theme) => ({
   grid: {
-    maxWidth: 370,
+    width: 600,
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "center",
   },
   toolbar: {
+    // background: "transparent",
     justifyContent: "center",
   },
   button: {
+    marginRight: 100,
     "&:hover": {
       background: "white",
       color: "black",
@@ -23,30 +26,27 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function MyAppBar({aboutRef,portfolioRef}) {
+function MyAppBar({references}) {
+  const { homeRef, aboutRef, techRef, portfolioRef } = references;
+
   const classes = useStyles();
 
   return (
     <React.Fragment>
-      <AppBar position="fixed" elevation={0}>
+      <AppBar position="fixed" elevation={0} className={classes.toolbar}>
         <Toolbar className={classes.toolbar}>
-          <Grid container className={classes.grid} spacing={3}>
-            <Grid item xs={4}>
-              <Button className={classes.button}>Home</Button>
+          <Grid container className={classes.grid} >
+            <Grid item xs={3}>
+            <Button className={classes.button} onClick={() => scrollTo(homeRef)}>Home</Button>
             </Grid>
-            <Grid item xs={4}>
-              <Button 
-              className={classes.button}
-              onClick={() => scrollTo(aboutRef)}
-              >
-                About
-                </Button>
+            <Grid item xs={3}>
+            <Button className={classes.button} onClick={() => scrollTo(aboutRef)}>About</Button>
             </Grid>
-            <Grid item xs={4}>
-              <Button className={classes.button}
-              onClick={() => scrollTo(portfolioRef)}>
-                Portfolio
-                </Button>
+            <Grid item xs={3}>
+            <Button className={classes.button} onClick={() => scrollTo(techRef)}>Technologies</Button>
+            </Grid>
+            <Grid item xs={3}>
+            <Button className={classes.button} onClick={() => scrollTo(portfolioRef)}>Portfolio</Button>
             </Grid>
           </Grid>
         </Toolbar>
