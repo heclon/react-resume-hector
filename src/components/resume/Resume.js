@@ -103,8 +103,7 @@ function Resume({reference}) {
                 color="textSecondary"
                 className={classes.description}
               >
-                <DoneAllIcon /> B. Informatic Engineering - Catholic Univ.
-                Andrés Bello
+                <DoneAllIcon /> Bachelors in Informatic Engineering - UCAB
               </Typography>
               Caracas, VEN. 2010
               <Typography
@@ -139,7 +138,7 @@ function Resume({reference}) {
               >
                 <DoneAllIcon /> Professional Trader and Portfolio Manager. ITPM
               </Typography>
-              Jun, 2021.
+              Jun, 2021
             </Grid>
           </Grid>
         </Grid>
