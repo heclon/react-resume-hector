@@ -28,7 +28,7 @@ const useStyles = makeStyles({
     color: "gray",
     fontWeight: "bold",
   },
-  title: {
+  about: {
     color: "lightblue",
     fontWeight: "bold",
   },
@@ -43,10 +43,11 @@ const useStyles = makeStyles({
   },
 });
 
-function About() {
+function About({reference}) {
   const classes = useStyles();
 
   return (
+   <section ref={reference}>
     <React.Fragment>
       <Container maxWidth="lg">
         <Grid container className={classes.gridVertical}>
@@ -55,7 +56,7 @@ function About() {
               <ProfileImage />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Typography variant="h3" component="h3" className={classes.title}>
+              <Typography variant="h3" component="h3" className={classes.about}>
                 About
               </Typography>
               <Typography
@@ -88,6 +89,7 @@ function About() {
         </Grid>
       </Container>
     </React.Fragment>
+      </section>
   );
 }
 

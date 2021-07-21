@@ -7,6 +7,7 @@ import PersonalCardHeader from "../card/PersonalHeader";
 import SocialMediaBar from "../social/SocialMediaGrid";
 import Chevron from "../../static/cursor/arrow-213-24.ico";
 import Button from "@material-ui/core/Button";
+import scrollTo from "../../util/scrollTo";
 
 const useStyles = makeStyles({
   grid: {
@@ -40,14 +41,17 @@ const PanelHeroImageContainer = styled.div`
 }
 `;
 
-const Header = () => {
+const Header = ({references}) => {
+    const { aboutRef, techRef, portfolioRef } = references;
+
   const classes = useStyles();
   return (
     <PanelHeroImageContainer image={backgroundImage}>
       <Grid container className={classes.grid}>
         <Grid item xs={6}>
-          <Button className={classes.button}>About</Button>
-          <Button className={classes.button}>Portfolio</Button>
+          <Button className={classes.button} onClick={() => scrollTo(aboutRef)}>About</Button>
+          <Button className={classes.button} onClick={() => scrollTo(techRef)}>Technologies</Button>
+          <Button className={classes.button} onClick={() => scrollTo(portfolioRef)}>Portfolio</Button>
         </Grid>
         <Grid item xs={12}>
           <PersonalCardHeader />

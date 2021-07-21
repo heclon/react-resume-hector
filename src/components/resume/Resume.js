@@ -50,10 +50,11 @@ const useStyles = makeStyles({
   },
 });
 
-function Resume() {
+function Resume({reference}) {
   const classes = useStyles();
 
   return (
+    <section ref={reference}>
     <React.Fragment>
       <Container maxWidth="lg">
         <Grid container className={classes.gridVertical}>
@@ -144,6 +145,7 @@ function Resume() {
         </Grid>
       </Container>
     </React.Fragment>
+    </section>
   );
 }
 

@@ -76,7 +76,7 @@ function TechImages() {
           text="Backends and APIs"
         />
 
-        <ImageCard imagePath={gitLogo} title="Git" text="Source code repositories in Gitfor all work" />
+        <ImageCard imagePath={gitLogo} title="Git" text="Git repos for all work" />
       </Container>
 
       <Typography variant="h4" className={classes.subtitle}>

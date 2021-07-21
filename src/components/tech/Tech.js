@@ -44,10 +44,11 @@ const useStyles = makeStyles({
   },
 });
 
-function Tech() {
+function Tech({reference}) {
   const classes = useStyles();
 
   return (
+    <section ref={reference}>
     <React.Fragment>
       <Container maxWidth="lg">
         <Divider className={classes.divider} />
@@ -61,6 +62,7 @@ function Tech() {
         </Grid>
       </Container>
     </React.Fragment>
+    </section>
   );
 }
 

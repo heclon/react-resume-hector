@@ -1,26 +1,11 @@
-import React from "react";
+import React,{ useRef, useEffect } from "react";
 import Button from "@material-ui/core/Button";
 import { AppBar } from "@material-ui/core";
 import Toolbar from "./Toolbar";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import Slide from "@material-ui/core/Slide";
-import PropTypes from "prop-types";
-function HideOnScroll(props) {
-  const { children, window } = props;
-  const trigger = useScrollTrigger({ target: window ? window() : undefined });
+import scrollTo from "../../util/scrollTo";
 
-  return (
-    <Slide appear={false} direction="down" in={!trigger}>
-      {children}
-    </Slide>
-  );
-}
-HideOnScroll.propTypes = {
-  children: PropTypes.element.isRequired,
-  window: PropTypes.func,
-};
 const useStyles = makeStyles((theme) => ({
   grid: {
     maxWidth: 370,
@@ -38,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function MyAppBar() {
+function MyAppBar({aboutRef,portfolioRef}) {
   const classes = useStyles();
 
   return (
@@ -50,10 +35,18 @@ function MyAppBar() {
               <Button className={classes.button}>Home</Button>
             </Grid>
             <Grid item xs={4}>
-              <Button className={classes.button}>About</Button>
+              <Button 
+              className={classes.button}
+              onClick={() => scrollTo(aboutRef)}
+              >
+                About
+                </Button>
             </Grid>
             <Grid item xs={4}>
-              <Button className={classes.button}>Portfolio</Button>
+              <Button className={classes.button}
+              onClick={() => scrollTo(portfolioRef)}>
+                Portfolio
+                </Button>
             </Grid>
           </Grid>
         </Toolbar>

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useRef }  from "react";
 import Header from "../components/header/Header";
 import About from "../components/about/About";
 import Resume from "../components/resume/Resume";
-import Work from "../components/work/Work";
+import Portfolio from "../components/portfolio/Portfolio";
 import Tech from "../components/tech/Tech";
 
 import {
@@ -14,6 +14,11 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 function App(props) {
+  const aboutRef = useRef(null);
+  const resumeRef = useRef(null);
+  const techRef = useRef(null);
+  const portfolioRef = useRef(null);
+
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   let theme = React.useMemo(
     () =>
@@ -32,15 +37,16 @@ function App(props) {
   );
   theme = responsiveFontSizes(theme);
 
+  const references = { aboutRef, techRef, portfolioRef }
   return (
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Header />
-        <About />
-        <Resume />
-        <Tech />
-        <Work />
+        <Header references={references}/>
+        <About reference={aboutRef}/>
+        <Resume reference={resumeRef}/>
+        <Tech reference={techRef}/>
+        <Portfolio reference={portfolioRef}/>
       </ThemeProvider>
     </React.Fragment>
   );
