@@ -9,7 +9,6 @@ import DoneAllIcon from "@material-ui/icons/DoneAll";
 const useStyles = makeStyles({
   gridVertical: {
     margin: 20,
-
     flexDirection: "column",
     alignItems: "center",
     color: "gray",
@@ -100,20 +99,28 @@ function Resume({reference}) {
               </Typography>
               <Typography
                 variant="h6"
-                color="textSecondary"
+                color="textPrimary"
                 className={classes.description}
               >
-                <DoneAllIcon /> Bachelors in Informatic Engineering - UCAB
+                <DoneAllIcon /> Bachelors in Informatic Engineering
+                <Typography
+                variant="h6"
+                color="textSecondary" style={{fontStyle: "italic"}}
+                className={classes.description}
+              >Andrés Bello Catholic University - UCAB</Typography> 
               </Typography>
-              Caracas, VEN. 2010
               <Typography
                 variant="h6"
-                color="textSecondary"
+                color="textPrimary"
                 className={classes.description}
               >
-                <DoneAllIcon /> Master in Quantitative Finance - UTS
+                <DoneAllIcon /> Master in Quantitative Finance
               </Typography>
-              Sydney, AUS. 2018
+              <Typography
+                variant="h6"
+                color="textSecondary" style={{fontStyle: "italic"}}
+                className={classes.description}
+              >University of Technology Sydney - UTS</Typography> 
             </Grid>
             <Grid item xs={12} sm={6}>
               <Typography
@@ -125,20 +132,29 @@ function Resume({reference}) {
               </Typography>
               <Typography
                 variant="h6"
-                color="textSecondary"
+                color="textPrimary"
                 className={classes.description}
               >
-                <DoneAllIcon /> AWS Certified Cloud Practitioner. Amazon Web Services
+                <DoneAllIcon /> AWS Certified Cloud Practitioner
+                <Typography
+                variant="h6"
+                color="textSecondary" style={{fontStyle: "italic"}}
+                className={classes.description}
+              > Amazon Web Services</Typography> 
+                
               </Typography>
-              Jan, 2020
               <Typography
                 variant="h6"
-                color="textSecondary"
+                color="textPrimary"
                 className={classes.description}
               >
-                <DoneAllIcon /> Professional Trader and Portfolio Manager. ITPM
+                <DoneAllIcon /> Certified as Professional Trader and Portfolio Manager
               </Typography>
-              Jun, 2021
+              <Typography
+                variant="h6"
+                color="textSecondary" style={{fontStyle: "italic"}}
+                className={classes.description}
+              >Institute of Trading and Portfolio Management</Typography>
             </Grid>
           </Grid>
         </Grid>

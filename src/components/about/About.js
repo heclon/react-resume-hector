@@ -7,7 +7,7 @@ import ProfileImage from "../card/ProfileImage";
 
 const useStyles = makeStyles({
   gridVertical: {
-    margin: 20,
+    margin: 10,
     flexDirection: "column",
     alignItems: "center",
     color: "gray",

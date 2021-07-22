@@ -7,14 +7,13 @@ import { makeStyles } from "@material-ui/core/styles";
 import scrollTo from "../../util/scrollTo";
 
 const useStyles = makeStyles((theme) => ({
-  grid: {
+  gridHorizontal: {
     width: 600,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
   },
   toolbar: {
-    // background: "transparent",
     justifyContent: "center",
   },
   button: {
@@ -33,9 +32,9 @@ function MyAppBar({references}) {
 
   return (
     <React.Fragment>
-      <AppBar position="fixed" elevation={0} className={classes.toolbar}>
+      <AppBar position="static" elevation={0}>
         <Toolbar className={classes.toolbar}>
-          <Grid container className={classes.grid} >
+          <Grid container className={classes.gridHorizontal} >
             <Grid item xs={3}>
             <Button className={classes.button} onClick={() => scrollTo(homeRef)}>Home</Button>
             </Grid>
