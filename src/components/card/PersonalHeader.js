@@ -15,7 +15,6 @@ const useStyles = makeStyles({
 
   },
   title: {
-    fontFamily: "Roboto",
     fontWeight: "bold",
   },
 });

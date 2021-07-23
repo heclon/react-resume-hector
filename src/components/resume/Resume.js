@@ -26,7 +26,7 @@ const useStyles = makeStyles({
     width: "70%",
     height: "20%",
     background: "lightblue",
-    color: "gray",
+    color: "black",
     fontWeight: "bold",
   },
   title: {

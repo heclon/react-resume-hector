@@ -81,7 +81,6 @@ function App(props) {
   //   fontWeight: '400',
   //   src: `
   //     local('MandalorianFont'),
-  //     local('MandalorianFont-SemiBold'),
   //     url(${MandalorianFont}) format('ttf')
   //   `,
   //   unicodeRange:
