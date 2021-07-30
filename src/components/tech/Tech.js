@@ -44,24 +44,24 @@ const useStyles = makeStyles({
   },
 });
 
-function Tech({reference}) {
+function Tech({ reference }) {
   const classes = useStyles();
 
   return (
     <section ref={reference}>
-    <React.Fragment>
-      <Container maxWidth="lg">
-        <Divider className={classes.divider} />
-        <Grid container className={classes.gridHorizontal}>
-          <Grid item xs={12} sm={6}>
-            <Typography variant="h3" component="h3" className={classes.title}>
-              Technologies
-            </Typography>
-            <TechImages />
+      <React.Fragment>
+        <Container maxWidth="lg">
+          <Divider className={classes.divider} />
+          <Grid container className={classes.gridHorizontal}>
+            <Grid item xs={12} sm={6}>
+              <Typography variant="h3" component="h3" className={classes.title}>
+                Technologies
+              </Typography>
+              <TechImages />
+            </Grid>
           </Grid>
-        </Grid>
-      </Container>
-    </React.Fragment>
+        </Container>
+      </React.Fragment>
     </section>
   );
 }

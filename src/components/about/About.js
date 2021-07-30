@@ -43,53 +43,57 @@ const useStyles = makeStyles({
   },
 });
 
-function About({reference}) {
+function About({ reference }) {
   const classes = useStyles();
 
   return (
-   <section ref={reference}>
-    <React.Fragment>
-      <Container maxWidth="lg">
-        <Grid container className={classes.gridVertical}>
-          <Grid container className={classes.gridHorizontal}>
-            <Grid item xs={12} sm={6}>
-              <ProfileImage />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Typography variant="h3" component="h3" className={classes.about}>
-                About
-              </Typography>
-              <Typography
-                variant="h6"
-                color="textSecondary"
-                className={classes.description}
-              >
-                Hello :) and welcome to my personal website.
-              </Typography>
-              <Typography
-                variant="h6"
-                color="textSecondary"
-                className={classes.description}
-              >
-                Sydney based, original from Venezuela, friendly guy with a
-                strong work ethic.
-              </Typography>
-              <Typography
-                variant="h6"
-                color="textSecondary"
-                className={classes.description}
-              >
-                My hobbies include having an active lifestyle, natural
-                landscapes photography, adventure-seeking travels, reading
-                books, and ocassional attempts to perform extreme sports:
-                mountain biking, snowboarding and kitesurfing.
-              </Typography>
+    <section ref={reference}>
+      <React.Fragment>
+        <Container maxWidth="lg">
+          <Grid container className={classes.gridVertical}>
+            <Grid container className={classes.gridHorizontal}>
+              <Grid item xs={12} sm={6}>
+                <ProfileImage />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <Typography
+                  variant="h3"
+                  component="h3"
+                  className={classes.about}
+                >
+                  About
+                </Typography>
+                <Typography
+                  variant="h6"
+                  color="textSecondary"
+                  className={classes.description}
+                >
+                  Hello :) and welcome to my personal website.
+                </Typography>
+                <Typography
+                  variant="h6"
+                  color="textSecondary"
+                  className={classes.description}
+                >
+                  Sydney based, original from Venezuela, friendly guy with a
+                  strong work ethic.
+                </Typography>
+                <Typography
+                  variant="h6"
+                  color="textSecondary"
+                  className={classes.description}
+                >
+                  My hobbies include having an active lifestyle, natural
+                  landscapes photography, adventure-seeking travels, reading
+                  books, and ocassional attempts to perform extreme sports:
+                  mountain biking, snowboarding and kitesurfing.
+                </Typography>
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      </Container>
-    </React.Fragment>
-      </section>
+        </Container>
+      </React.Fragment>
+    </section>
   );
 }
 

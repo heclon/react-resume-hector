@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function MyAppBar({references}) {
+function MyAppBar({ references }) {
   const { homeRef, aboutRef, techRef, portfolioRef } = references;
 
   const classes = useStyles();
@@ -34,18 +34,38 @@ function MyAppBar({references}) {
     <React.Fragment>
       <AppBar position="static" elevation={0}>
         <Toolbar className={classes.toolbar}>
-          <Grid container className={classes.gridHorizontal} >
+          <Grid container className={classes.gridHorizontal}>
             <Grid item xs={3}>
-            <Button className={classes.button} onClick={() => scrollTo(homeRef)}>Home</Button>
+              <Button
+                className={classes.button}
+                onClick={() => scrollTo(homeRef)}
+              >
+                Home
+              </Button>
             </Grid>
             <Grid item xs={3}>
-            <Button className={classes.button} onClick={() => scrollTo(aboutRef)}>About</Button>
+              <Button
+                className={classes.button}
+                onClick={() => scrollTo(aboutRef)}
+              >
+                About
+              </Button>
             </Grid>
             <Grid item xs={3}>
-            <Button className={classes.button} onClick={() => scrollTo(techRef)}>Technologies</Button>
+              <Button
+                className={classes.button}
+                onClick={() => scrollTo(techRef)}
+              >
+                Technologies
+              </Button>
             </Grid>
             <Grid item xs={3}>
-            <Button className={classes.button} onClick={() => scrollTo(portfolioRef)}>Portfolio</Button>
+              <Button
+                className={classes.button}
+                onClick={() => scrollTo(portfolioRef)}
+              >
+                Portfolio
+              </Button>
             </Grid>
           </Grid>
         </Toolbar>

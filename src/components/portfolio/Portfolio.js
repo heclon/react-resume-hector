@@ -42,26 +42,30 @@ const useStyles = makeStyles({
   },
 });
 
-function Portfolio({reference}) {
+function Portfolio({ reference }) {
   const classes = useStyles();
 
   return (
     <section ref={reference}>
-    <React.Fragment>
-      <Container maxWidth="lg">
-        <Divider className={classes.divider} />
-        <Grid container className={classes.gridVertical}>
-          <Grid container className={classes.gridHorizontal}>
-            <Grid item xs={12} sm={6}>
-              <Typography variant="h3" component="h3" className={classes.title}>
-              Portfolio
-              </Typography>
+      <React.Fragment>
+        <Container maxWidth="lg">
+          <Divider className={classes.divider} />
+          <Grid container className={classes.gridVertical}>
+            <Grid container className={classes.gridHorizontal}>
+              <Grid item xs={12} sm={6}>
+                <Typography
+                  variant="h3"
+                  component="h3"
+                  className={classes.title}
+                >
+                  Portfolio
+                </Typography>
+              </Grid>
+              <Grid item xs={12} sm={6}></Grid>
             </Grid>
-            <Grid item xs={12} sm={6}></Grid>
           </Grid>
-        </Grid>
-      </Container>
-    </React.Fragment>
+        </Container>
+      </React.Fragment>
     </section>
   );
 }

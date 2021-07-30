@@ -49,117 +49,134 @@ const useStyles = makeStyles({
   },
 });
 
-function Resume({reference}) {
+function Resume({ reference }) {
   const classes = useStyles();
 
   return (
     <section ref={reference}>
-    <React.Fragment>
-      <Container maxWidth="lg">
-        <Grid container className={classes.gridVertical}>
-          <Grid container className={classes.gridHorizontal}>
-            <Grid item xs={12} sm={6}>
-              <Typography variant="h3" component="h3" className={classes.title}>
-                Resume
-              </Typography>
-              <Typography
-                variant="h6"
-                color="textSecondary"
-                className={classes.description}
-              >
-                Professionally speaking, I am that engineer with a visionary
-                mindset and the pioneer's spirit.
-              </Typography>
-              <Typography
-                variant="h6"
-                color="textSecondary"
-                className={classes.description}
-              >
-                Skilled in Full-Stack development, AWS Cloud architecture, and
-                Financial Markets.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Button
-                className={classes.button}
-                onClick={() => {
-                  window.open(
-                    "https://drive.google.com/file/d/1fw4w4Ppmk6AyNvPYbIaEzn3O1k8soASt/view?usp=sharing",
-                    "_blank"
-                  );
-                }}
-              >
-                {" "}
-                Open Resume
-              </Button>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Typography variant="h4" className={classes.subtitle}>
-                Education
-              </Typography>
-              <Typography
-                variant="h6"
-                color="textPrimary"
-                className={classes.description}
-              >
-                <DoneAllIcon /> Bachelors in Informatic Engineering
+      <React.Fragment>
+        <Container maxWidth="lg">
+          <Grid container className={classes.gridVertical}>
+            <Grid container className={classes.gridHorizontal}>
+              <Grid item xs={12} sm={6}>
                 <Typography
-                variant="h6"
-                color="textSecondary" style={{fontStyle: "italic"}}
-                className={classes.description}
-              >Andrés Bello Catholic University - UCAB</Typography> 
-              </Typography>
-              <Typography
-                variant="h6"
-                color="textPrimary"
-                className={classes.description}
-              >
-                <DoneAllIcon /> Master in Quantitative Finance
-              </Typography>
-              <Typography
-                variant="h6"
-                color="textSecondary" style={{fontStyle: "italic"}}
-                className={classes.description}
-              >University of Technology Sydney - UTS</Typography> 
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Typography
-                variant="h4"
-                color="textSecondary"
-                className={classes.subtitle}
-              >
-                Certifications
-              </Typography>
-              <Typography
-                variant="h6"
-                color="textPrimary"
-                className={classes.description}
-              >
-                <DoneAllIcon /> AWS Certified Cloud Practitioner
+                  variant="h3"
+                  component="h3"
+                  className={classes.title}
+                >
+                  Resume
+                </Typography>
                 <Typography
-                variant="h6"
-                color="textSecondary" style={{fontStyle: "italic"}}
-                className={classes.description}
-              > Amazon Web Services</Typography> 
-                
-              </Typography>
-              <Typography
-                variant="h6"
-                color="textPrimary"
-                className={classes.description}
-              >
-                <DoneAllIcon /> Certified as Professional Trader and Portfolio Manager
-              </Typography>
-              <Typography
-                variant="h6"
-                color="textSecondary" style={{fontStyle: "italic"}}
-                className={classes.description}
-              >Institute of Trading and Portfolio Management</Typography>
+                  variant="h6"
+                  color="textSecondary"
+                  className={classes.description}
+                >
+                  Professionally speaking, I am that engineer with a visionary
+                  mindset and the pioneer's spirit.
+                </Typography>
+                <Typography
+                  variant="h6"
+                  color="textSecondary"
+                  className={classes.description}
+                >
+                  Skilled in Full-Stack development, AWS Cloud architecture, and
+                  Financial Markets.
+                </Typography>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <Button
+                  className={classes.button}
+                  onClick={() => {
+                    window.open(
+                      "https://drive.google.com/file/d/1fw4w4Ppmk6AyNvPYbIaEzn3O1k8soASt/view?usp=sharing",
+                      "_blank"
+                    );
+                  }}
+                >
+                  {" "}
+                  Open Resume
+                </Button>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <Typography variant="h4" className={classes.subtitle}>
+                  Education
+                </Typography>
+                <Typography
+                  variant="h6"
+                  color="textPrimary"
+                  className={classes.description}
+                >
+                  <DoneAllIcon /> Bachelors in Informatic Engineering
+                  <Typography
+                    variant="h6"
+                    color="textSecondary"
+                    style={{ fontStyle: "italic" }}
+                    className={classes.description}
+                  >
+                    Andrés Bello Catholic University - UCAB
+                  </Typography>
+                </Typography>
+                <Typography
+                  variant="h6"
+                  color="textPrimary"
+                  className={classes.description}
+                >
+                  <DoneAllIcon /> Master in Quantitative Finance
+                </Typography>
+                <Typography
+                  variant="h6"
+                  color="textSecondary"
+                  style={{ fontStyle: "italic" }}
+                  className={classes.description}
+                >
+                  University of Technology Sydney - UTS
+                </Typography>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <Typography
+                  variant="h4"
+                  color="textSecondary"
+                  className={classes.subtitle}
+                >
+                  Certifications
+                </Typography>
+                <Typography
+                  variant="h6"
+                  color="textPrimary"
+                  className={classes.description}
+                >
+                  <DoneAllIcon /> AWS Certified Cloud Practitioner
+                  <Typography
+                    variant="h6"
+                    color="textSecondary"
+                    style={{ fontStyle: "italic" }}
+                    className={classes.description}
+                  >
+                    {" "}
+                    Amazon Web Services
+                  </Typography>
+                </Typography>
+                <Typography
+                  variant="h6"
+                  color="textPrimary"
+                  className={classes.description}
+                >
+                  <DoneAllIcon /> Certified as Professional Trader and Portfolio
+                  Manager
+                </Typography>
+                <Typography
+                  variant="h6"
+                  color="textSecondary"
+                  style={{ fontStyle: "italic" }}
+                  className={classes.description}
+                >
+                  Institute of Trading and Portfolio Management
+                </Typography>
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      </Container>
-    </React.Fragment>
+        </Container>
+      </React.Fragment>
     </section>
   );
 }

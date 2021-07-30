@@ -41,27 +41,42 @@ const PanelHeroImageContainer = styled.div`
 }
 `;
 
-const Header = ({references}) => {
-    const { homeRef, aboutRef, techRef, portfolioRef } = references;
+const Header = ({ references }) => {
+  const { homeRef, aboutRef, techRef, portfolioRef } = references;
 
   const classes = useStyles();
   return (
     <section ref={homeRef}>
-    <PanelHeroImageContainer image={backgroundImage}>
-      <Grid container className={classes.grid}>
-        <Grid item xs={6}>
-          <Button className={classes.button} onClick={() => scrollTo(aboutRef)}>About</Button>
-          <Button className={classes.button} onClick={() => scrollTo(techRef)}>Technologies</Button>
-          <Button className={classes.button} onClick={() => scrollTo(portfolioRef)}>Portfolio</Button>
+      <PanelHeroImageContainer image={backgroundImage}>
+        <Grid container className={classes.grid}>
+          <Grid item xs={6}>
+            <Button
+              className={classes.button}
+              onClick={() => scrollTo(aboutRef)}
+            >
+              About
+            </Button>
+            <Button
+              className={classes.button}
+              onClick={() => scrollTo(techRef)}
+            >
+              Technologies
+            </Button>
+            <Button
+              className={classes.button}
+              onClick={() => scrollTo(portfolioRef)}
+            >
+              Portfolio
+            </Button>
+          </Grid>
+          <Grid item xs={12}>
+            <PersonalCardHeader />
+          </Grid>
+          <Grid item xs={12}>
+            <SocialMediaBar />
+          </Grid>
         </Grid>
-        <Grid item xs={12}>
-          <PersonalCardHeader />
-        </Grid>
-        <Grid item xs={12}>
-          <SocialMediaBar />
-        </Grid>
-      </Grid>
-    </PanelHeroImageContainer>
+      </PanelHeroImageContainer>
     </section>
   );
 };

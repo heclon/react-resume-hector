@@ -1,5 +1,5 @@
-import React, { useRef, useMemo }  from "react";
-import PropTypes from 'prop-types';
+import React, { useRef, useMemo } from "react";
+import PropTypes from "prop-types";
 import Header from "../components/header/Header";
 import About from "../components/about/About";
 import Resume from "../components/resume/Resume";
@@ -7,23 +7,23 @@ import Portfolio from "../components/portfolio/Portfolio";
 import Tech from "../components/tech/Tech";
 // import MandalorianFont from "../static/fonts/mandalorelasertitle.ttf";
 
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 import {
   createTheme,
   ThemeProvider,
   responsiveFontSizes,
 } from "@material-ui/core/styles";
-import Zoom from '@material-ui/core/Zoom';
+import Zoom from "@material-ui/core/Zoom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Fab from '@material-ui/core/Fab';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import Fab from "@material-ui/core/Fab";
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    color:"lightblue",
-    position: 'fixed',
+    color: "lightblue",
+    position: "fixed",
     bottom: theme.spacing(2),
     right: theme.spacing(2),
   },
@@ -42,10 +42,12 @@ function ScrollTop(props) {
   });
 
   const handleClick = (event) => {
-    const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
+    const anchor = (event.target.ownerDocument || document).querySelector(
+      "#back-to-top-anchor"
+    );
 
     if (anchor) {
-      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      anchor.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };
 
@@ -90,39 +92,39 @@ function App(props) {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   let theme = useMemo(
     () =>
-    createTheme({
-      palette: {
-        type: prefersDarkMode ? "dark" : "light",
-        primary: {
-          main: "#424242",
+      createTheme({
+        palette: {
+          type: prefersDarkMode ? "dark" : "light",
+          primary: {
+            main: "#424242",
+          },
+          secondary: {
+            main: "#ebb434",
+          },
         },
-        secondary: {
-          main: "#ebb434",
-        },
-      },
       }),
     [prefersDarkMode]
   );
   theme = responsiveFontSizes(theme);
 
-  const references = { homeRef, aboutRef, techRef, portfolioRef }
+  const references = { homeRef, aboutRef, techRef, portfolioRef };
   return (
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-          {/* <MyAppBar references={references}/> */}
-          <section id="back-to-top-anchor" >
-            <Header references={references}/>
-          </section>
-          <About reference={aboutRef}/>
-          <Resume reference={resumeRef}/>
-          <Tech reference={techRef}/>
-          <Portfolio reference={portfolioRef}/>
-          <ScrollTop {...props}>
-            <Fab color="blue" size="large" aria-label="Back to top">
-              <KeyboardArrowUpIcon />
-            </Fab>
-          </ScrollTop>
+        {/* <MyAppBar references={references}/> */}
+        <section id="back-to-top-anchor">
+          <Header references={references} />
+        </section>
+        <About reference={aboutRef} />
+        <Resume reference={resumeRef} />
+        <Tech reference={techRef} />
+        <Portfolio reference={portfolioRef} />
+        <ScrollTop {...props}>
+          <Fab color="blue" size="large" aria-label="Back to top">
+            <KeyboardArrowUpIcon />
+          </Fab>
+        </ScrollTop>
       </ThemeProvider>
     </React.Fragment>
   );
