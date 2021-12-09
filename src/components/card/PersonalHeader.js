@@ -6,22 +6,23 @@ import Typography from "@material-ui/core/Typography";
 import CardMedia from "@material-ui/core/CardMedia";
 import hectorMandoFont from "../../static/images/HL_mandalorian.png";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   cardPersonal: {
     background: "transparent",
     boxShadow: "none",
-    marginTop: 10,
-    minHeight: 50,
+    // marginTop: 10,
+    // minHeight: 50,
   },
   title: {
     fontWeight: "bold",
+    padding: theme.spacing(2),
   },
   media: {
-    height: 180,
-    width: 1700,
+    // height: 180,
+    // width: 1700,
     filter: "invert(1)",
   },
-});
+}));
 
 const PersonalCardHeader = () => {
   const classes = useStyles();
@@ -34,7 +35,7 @@ const PersonalCardHeader = () => {
           Hector Longarte
         </Typography>
 
-        <Typography variant="h3" className={classes.pos} color="textSecondary">
+        <Typography variant="h3" className={classes.title} color="textSecondary">
           {/* Full-stack, Cloud and Financial Markets engineer. All in one. */}
           Full-stack and Cloud engineer
         </Typography>

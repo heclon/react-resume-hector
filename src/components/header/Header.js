@@ -11,8 +11,7 @@ import scrollTo from "../../util/scrollTo";
 
 const useStyles = makeStyles({
   grid: {
-    minWidth: 500,
-    marginTop: 150,
+    marginTop: 100,
     flexDirection: "column",
     alignItems: "center",
   },
@@ -25,11 +24,12 @@ const useStyles = makeStyles({
 });
 
 const PanelHeroImageContainer = styled.div`
-  position: relative;
-  height: 100%;
+  position: absolute;
   min-height: 900px;
+  top: 0px;
+  left: 0,
+  height: 100%;
   width: 100%;
-  margin-top: 0px;
   background: ${(props) =>
     props.image ? `url(${props.image})  center` : "gray"};
   background-size: cover !important;

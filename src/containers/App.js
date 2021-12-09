@@ -20,6 +20,10 @@ import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Fab from "@material-ui/core/Fab";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 
+
+import Features from './Features';
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     color: "lightblue",
@@ -115,11 +119,12 @@ function App(props) {
         {/* <MyAppBar references={references}/> */}
         <section id="back-to-top-anchor">
           <Header references={references} />
+          {/* <Features /> */}
         </section>
-        <About reference={aboutRef} />
+        {/* <About reference={aboutRef} />
         <Resume reference={resumeRef} />
         <Tech reference={techRef} />
-        <Portfolio reference={portfolioRef} />
+        <Portfolio reference={portfolioRef} /> */}
         <ScrollTop {...props}>
           <Fab color="blue" size="large" aria-label="Back to top">
             <KeyboardArrowUpIcon />
