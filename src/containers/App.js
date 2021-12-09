@@ -66,10 +66,6 @@ function ScrollTop(props) {
 
 ScrollTop.propTypes = {
   children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 
@@ -114,17 +110,16 @@ function App(props) {
   const references = { homeRef, aboutRef, techRef, portfolioRef };
   return (
     <React.Fragment>
+      <section id="back-to-top-anchor"/>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        {/* <MyAppBar references={references}/> */}
-        <section id="back-to-top-anchor">
           <Header references={references} />
           {/* <Features /> */}
-        </section>
-        {/* <About reference={aboutRef} />
+
+        <About reference={aboutRef} />
         <Resume reference={resumeRef} />
-        <Tech reference={techRef} />
-        <Portfolio reference={portfolioRef} /> */}
+        {/* <Tech reference={techRef} /> */}
+        <Portfolio reference={portfolioRef} />
         <ScrollTop {...props}>
           <Fab color="blue" size="large" aria-label="Back to top">
             <KeyboardArrowUpIcon />

@@ -5,12 +5,10 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import ProfileImage from "../card/ProfileImage";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   gridVertical: {
-    margin: 10,
     flexDirection: "column",
     alignItems: "center",
-    color: "gray",
   },
   gridHorizontal: {
     flexDirection: "row",
@@ -31,6 +29,10 @@ const useStyles = makeStyles({
   about: {
     color: "lightblue",
     fontWeight: "bold",
+    position: 'relative'
+  },
+  root: {
+    padding: theme.spacing(12, 4),
   },
   description: {
     marginTop: 20,
@@ -41,15 +43,14 @@ const useStyles = makeStyles({
     marginTop: 30,
     marginBottom: 30,
   },
-});
+}));
 
 function About({ reference }) {
   const classes = useStyles();
 
   return (
     <section ref={reference}>
-      <React.Fragment>
-        <Container maxWidth="lg">
+        <Container component="section" maxWidth="lg" className={classes.root}>
           <Grid container className={classes.gridVertical}>
             <Grid container className={classes.gridHorizontal}>
               <Grid item xs={12} sm={6}>
@@ -68,15 +69,14 @@ function About({ reference }) {
                   color="textSecondary"
                   className={classes.description}
                 >
-                  Hello :) and welcome to my personal website.
+                  Welcome to my personal website.
                 </Typography>
                 <Typography
                   variant="h6"
                   color="textSecondary"
                   className={classes.description}
                 >
-                  Sydney based, original from Venezuela, friendly guy with a
-                  strong work ethic.
+                  I am original from Venezuela, a friendly guy with a passion for sports.
                 </Typography>
                 <Typography
                   variant="h6"
@@ -85,14 +85,12 @@ function About({ reference }) {
                 >
                   My hobbies include having an active lifestyle, natural
                   landscapes photography, adventure-seeking travels, reading
-                  books, and ocassional attempts to perform extreme sports:
-                  mountain biking, snowboarding and kitesurfing.
+                  books, and the ocassional mountain or water sports.
                 </Typography>
               </Grid>
             </Grid>
           </Grid>
         </Container>
-      </React.Fragment>
     </section>
   );
 }

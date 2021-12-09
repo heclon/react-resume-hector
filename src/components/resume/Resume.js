@@ -6,9 +6,11 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import DoneAllIcon from "@material-ui/icons/DoneAll";
 
-const useStyles = makeStyles({
+const linkResume = "https://drive.google.com/file/d/1N695vUhUexI-sIRi-8o2jrcysLaJJ9ZK/view?usp=sharing";
+
+const useStyles = makeStyles(theme => ({
   gridVertical: {
-    margin: 20,
+    padding: theme.spacing(2),
     flexDirection: "column",
     alignItems: "center",
     color: "gray",
@@ -21,10 +23,11 @@ const useStyles = makeStyles({
       background: "white",
       color: "black",
     },
-    marginTop: "15%",
+    marginTop: "20%",
+    marginBottom: "10%",
     marginLeft: "15%",
     width: "70%",
-    height: "20%",
+    height: "40px",
     background: "lightblue",
     color: "black",
     fontWeight: "bold",
@@ -42,12 +45,14 @@ const useStyles = makeStyles({
   description: {
     marginTop: 20,
     marginBottom: 20,
+    paddingRight: theme.spacing(2),
+
   },
   divider: {
     background: "white",
     marginBottom: 30,
   },
-});
+}));
 
 function Resume({ reference }) {
   const classes = useStyles();
@@ -71,7 +76,8 @@ function Resume({ reference }) {
                   color="textSecondary"
                   className={classes.description}
                 >
-                  Professionally speaking, I am that engineer with a visionary
+                  Professionally speaking, I am a software engineer with a
+                  strong work ethic, a visionary
                   mindset and the pioneer's spirit.
                 </Typography>
                 <Typography
@@ -79,16 +85,28 @@ function Resume({ reference }) {
                   color="textSecondary"
                   className={classes.description}
                 >
-                  Skilled in Full-Stack development, AWS Cloud architecture, and
+                  Skilled in Full-Stack development, Software Engineering principles and best practices, AWS Cloud architecture, and
                   Financial Markets.
                 </Typography>
+
+                <Grid item xl={12}> 
+                <Typography
+                  variant="h6"
+                  color="textSecondary"
+                  className={classes.description}
+                  >
+                  My experience includes developing software solutions for multiple industries including banking, fintech, retail, real estate, construction, and entertainment. Also, I have been part of the regional product support and consulting teams for SAP commerce implementations.
+                </Typography>
               </Grid>
+                
+              </Grid>
+              
               <Grid item xs={12} sm={6}>
                 <Button
                   className={classes.button}
                   onClick={() => {
                     window.open(
-                      "https://drive.google.com/file/d/1fw4w4Ppmk6AyNvPYbIaEzn3O1k8soASt/view?usp=sharing",
+                      linkResume,
                       "_blank"
                     );
                   }}
@@ -106,7 +124,7 @@ function Resume({ reference }) {
                   color="textPrimary"
                   className={classes.description}
                 >
-                  <DoneAllIcon /> Bachelors in Informatic Engineering
+                  <DoneAllIcon /> Bachelors in Informatic Engineering - 2010
                   <Typography
                     variant="h6"
                     color="textSecondary"
@@ -121,7 +139,7 @@ function Resume({ reference }) {
                   color="textPrimary"
                   className={classes.description}
                 >
-                  <DoneAllIcon /> Master in Quantitative Finance
+                  <DoneAllIcon /> Master in Quantitative Finance - 2018
                 </Typography>
                 <Typography
                   variant="h6"
@@ -145,7 +163,7 @@ function Resume({ reference }) {
                   color="textPrimary"
                   className={classes.description}
                 >
-                  <DoneAllIcon /> AWS Certified Cloud Practitioner
+                  <DoneAllIcon /> AWS Certified Cloud Practitioner - 2020
                   <Typography
                     variant="h6"
                     color="textSecondary"
@@ -162,7 +180,7 @@ function Resume({ reference }) {
                   className={classes.description}
                 >
                   <DoneAllIcon /> Certified as Professional Trader and Portfolio
-                  Manager
+                  Manager - 2021
                 </Typography>
                 <Typography
                   variant="h6"

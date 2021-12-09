@@ -8,21 +8,23 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardMedia from "@material-ui/core/CardMedia";
 import Box from "@material-ui/core/Box";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   container: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+    padding: theme.spacing(1),
   },
   card: {
     borderRadius: "10%",
   },
   media: {
+    position: 'relative',
     height: 200,
     width: 200,
   },
-});
+}));
 
 function ProfileImage() {
   const classes = useStyles();

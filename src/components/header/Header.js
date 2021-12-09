@@ -24,7 +24,7 @@ const useStyles = makeStyles({
 });
 
 const PanelHeroImageContainer = styled.div`
-  position: absolute;
+  position: relative;
   min-height: 900px;
   top: 0px;
   left: 0,
@@ -32,8 +32,8 @@ const PanelHeroImageContainer = styled.div`
   width: 100%;
   background: ${(props) =>
     props.image ? `url(${props.image})  center` : "gray"};
-  background-size: cover !important;
-  -webkit-background-size: cover !important;
+  // background-size: cover !important;
+  // -webkit-background-size: cover !important;
   text-align: center;
   display: inline-block;
   cursor: url(${Chevron}) 30 30,auto;
