@@ -50,7 +50,13 @@ const SocialMediaBar = () => {
       </Grid>
       <Grid item xs={4}>
         <Fab className={classes.fab}>
-          <Twitter />
+          <Twitter 
+          onClick={() =>
+            window.open(
+              "https://twitter.com/trader133115164",
+              "_blank"
+            )
+          }/>
         </Fab>
       </Grid>
     </Grid>

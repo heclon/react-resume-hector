@@ -20,6 +20,10 @@ import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Fab from "@material-ui/core/Fab";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 
+
+import Features from './Features';
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     color: "lightblue",
@@ -62,10 +66,6 @@ function ScrollTop(props) {
 
 ScrollTop.propTypes = {
   children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 
@@ -110,12 +110,12 @@ function App(props) {
   const references = { homeRef, aboutRef, techRef, portfolioRef };
   return (
     <React.Fragment>
+      <section id="back-to-top-anchor"/>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        {/* <MyAppBar references={references}/> */}
-        <section id="back-to-top-anchor">
           <Header references={references} />
-        </section>
+
+
         <About reference={aboutRef} />
         <Resume reference={resumeRef} />
         <Tech reference={techRef} />
