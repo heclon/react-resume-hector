@@ -21,9 +21,6 @@ import Fab from "@material-ui/core/Fab";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 
 
-import Features from './Features';
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
     color: "lightblue",

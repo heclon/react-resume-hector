@@ -85,7 +85,7 @@ function Resume({ reference }) {
                   color="textSecondary"
                   className={classes.description}
                 >
-                  Skilled in Full-Stack development, Software Engineering principles and best practices, AWS Cloud architecture, and
+                  Skilled in Full-Stack development, Software Engineering principles and best practices, SDLC standards, AWS Cloud architecture, and
                   Financial Markets.
                 </Typography>
 

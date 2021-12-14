@@ -26,7 +26,7 @@
     "test": "jest --coverage --updateSnapshot",
     "prettier": "prettier --write .",
     "eject": "react-scripts eject",
-    "predeploy": "yarn run build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -b main -d build"
   },
   "eslintConfig": {
