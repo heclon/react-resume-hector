@@ -114,11 +114,11 @@ function App(props) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
           <Header references={references} />
-          {/* <Features /> */}
+
 
         <About reference={aboutRef} />
         <Resume reference={resumeRef} />
-        {/* <Tech reference={techRef} /> */}
+        <Tech reference={techRef} />
         <Portfolio reference={portfolioRef} />
         <ScrollTop {...props}>
           <Fab color="blue" size="large" aria-label="Back to top">

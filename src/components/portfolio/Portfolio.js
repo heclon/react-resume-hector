@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import DoneAllIcon from "@material-ui/icons/DoneAll";
 import DomainForAgents from './DomainForAgents';
 import DomainAnalytics from './DomainAnalytics';
+import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles({
   gridHorizontal: {
@@ -42,6 +43,11 @@ const useStyles = makeStyles({
     marginBottom: 20,
     color: "white",
   },
+  divider: {
+    background: "gray",
+    marginTop: 50,
+    marginBottom: 30,
+  },
 });
 
 function Portfolio({ reference }) {
@@ -55,7 +61,7 @@ function Portfolio({ reference }) {
                 direction="column"
                 justifyContent="flex-start"
                 alignItems="stretch">
-
+              <Divider className={classes.divider} />
               <Grid item xs={12} sm={6}>
                 <Typography
                   variant="h3"
@@ -127,7 +133,7 @@ function Portfolio({ reference }) {
                     style={{ fontStyle: "italic" }}
                     className={classes.description}
                   >
-                    C++
+                    Java and C++
                   </Typography>
                 </Typography>
               </Grid>
@@ -143,7 +149,7 @@ function Portfolio({ reference }) {
                     style={{ fontStyle: "italic" }}
                     className={classes.description}
                   >
-                    C++
+                    Java and C++
                   </Typography>
                 </Typography>
               </Grid>
@@ -159,7 +165,7 @@ function Portfolio({ reference }) {
                     style={{ fontStyle: "italic" }}
                     className={classes.description}
                   >
-                    C++
+                    Java and C++
                   </Typography>
                   </Typography>
                 </Grid>
@@ -175,7 +181,7 @@ function Portfolio({ reference }) {
                     style={{ fontStyle: "italic" }}
                     className={classes.description}
                   >
-                    C++
+                    Java and C++
                   </Typography>
                   </Typography>
                 </Grid>
