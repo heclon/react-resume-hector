@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.js": "/react-resume-hector/static/js/main.cb0ea56f.chunk.js",
+    "main.js.map": "/react-resume-hector/static/js/main.cb0ea56f.chunk.js.map",
+    "runtime-main.js": "/react-resume-hector/static/js/runtime-main.0c13b219.js",
+    "runtime-main.js.map": "/react-resume-hector/static/js/runtime-main.0c13b219.js.map",
+    "static/js/2.f6a4d836.chunk.js": "/react-resume-hector/static/js/2.f6a4d836.chunk.js",
+    "static/js/2.f6a4d836.chunk.js.map": "/react-resume-hector/static/js/2.f6a4d836.chunk.js.map",
+    "static/js/3.8f64f173.chunk.js": "/react-resume-hector/static/js/3.8f64f173.chunk.js",
+    "static/js/3.8f64f173.chunk.js.map": "/react-resume-hector/static/js/3.8f64f173.chunk.js.map",
+    "index.html": "/react-resume-hector/index.html",
+    "static/js/2.f6a4d836.chunk.js.LICENSE.txt": "/react-resume-hector/static/js/2.f6a4d836.chunk.js.LICENSE.txt",
+    "static/media/R.dac9c6fb.svg": "/react-resume-hector/static/media/R.dac9c6fb.svg",
+    "static/media/apollo.43adf63d.svg": "/react-resume-hector/static/media/apollo.43adf63d.svg",
+    "static/media/arrow-213-24.8fbd85ca.ico": "/react-resume-hector/static/media/arrow-213-24.8fbd85ca.ico",
+    "static/media/aws.4d0def09.svg": "/react-resume-hector/static/media/aws.4d0def09.svg",
+    "static/media/bg7.32c7eec6.jpg": "/react-resume-hector/static/media/bg7.32c7eec6.jpg",
+    "static/media/domain-analytics.b6a9d742.png": "/react-resume-hector/static/media/domain-analytics.b6a9d742.png",
+    "static/media/domain-for-agents.e55e974e.png": "/react-resume-hector/static/media/domain-for-agents.e55e974e.png",
+    "static/media/git.87b79116.svg": "/react-resume-hector/static/media/git.87b79116.svg",
+    "static/media/graphql.ea6ed40a.webp": "/react-resume-hector/static/media/graphql.ea6ed40a.webp",
+    "static/media/java.269f3bb9.svg": "/react-resume-hector/static/media/java.269f3bb9.svg",
+    "static/media/nodejs.2c61171f.svg": "/react-resume-hector/static/media/nodejs.2c61171f.svg",
+    "static/media/profile.26f91823.png": "/react-resume-hector/static/media/profile.26f91823.png",
+    "static/media/python.72778fba.svg": "/react-resume-hector/static/media/python.72778fba.svg",
+    "static/media/react.ad5bf3e1.png": "/react-resume-hector/static/media/react.ad5bf3e1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0c13b219.js",
+    "static/js/2.f6a4d836.chunk.js",
+    "static/js/main.cb0ea56f.chunk.js"
+  ]
+}
