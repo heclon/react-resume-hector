@@ -1,13 +1,14 @@
 import React from "react";
-import domainForAgents from "../../static/images/domain-for-agents.png";
+import lornajane from "../../static/images/lornajane.png";
 import styled from "styled-components";
 
-const DomaiForAgentsImageContainer = styled.div`
+const LornajaneImageContainer = styled.div`
   position: relative;
-  height: 500px;
-  width: 390px;
+  height: 360px;
+  width: 400px;
+  margin-top: 5%;
   margin-bottom: 5%;
-  border-radius: 4%;
+  border-radius: 5%;
   background: ${(props) =>
     props.image ? `url(${props.image})  center` : "gray"};
   text-align: center;
@@ -16,12 +17,12 @@ const DomaiForAgentsImageContainer = styled.div`
   cursor: pointer;
 `;
 
-function DomainForAgents() {
+function Lornajane() {
   return (
-    <DomaiForAgentsImageContainer image={domainForAgents}
+    <LornajaneImageContainer image={lornajane}
     onClick={() => {
       window.open(
-        'https://agent.domain.com.au/domain-for-agents/',
+        'https://www.lornajane.com.au/',
         '_blank'
       );
     }}/>
@@ -29,4 +30,4 @@ function DomainForAgents() {
   );
 }
 
-export default DomainForAgents;
+export default Lornajane;
