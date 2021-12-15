@@ -1,13 +1,14 @@
 import React from "react";
-import domainAnalytics from "../../static/images/domain-analytics.png";
+import lornajane from "../../static/images/lornajane.png";
 import styled from "styled-components";
 
-const DomainAnalyticsImageContainer = styled.div`
+const LornajaneImageContainer = styled.div`
   position: relative;
-  height: 658px;
-  width: 334px;
+  height: 360px;
+  width: 400px;
+  margin-top: 5%;
   margin-bottom: 5%;
-  border-radius: 10%;
+  border-radius: 5%;
   background: ${(props) =>
     props.image ? `url(${props.image})  center` : "gray"};
   text-align: center;
@@ -16,12 +17,12 @@ const DomainAnalyticsImageContainer = styled.div`
   cursor: pointer;
 `;
 
-function DomainAnalytics() {
+function Lornajane() {
   return (
-    <DomainAnalyticsImageContainer image={domainAnalytics}
+    <LornajaneImageContainer image={lornajane}
     onClick={() => {
       window.open(
-        'https://agent.domain.com.au/domain-for-agents/',
+        'https://www.lornajane.com.au/',
         '_blank'
       );
     }}/>
@@ -29,4 +30,4 @@ function DomainAnalytics() {
   );
 }
 
-export default DomainAnalytics;
+export default Lornajane;

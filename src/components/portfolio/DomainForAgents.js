@@ -13,11 +13,18 @@ const DomaiForAgentsImageContainer = styled.div`
   text-align: center;
   display: inline-block;
   overflow: hidden;
+  cursor: pointer;
 `;
 
 function DomainForAgents() {
   return (
-    <DomaiForAgentsImageContainer image={domainForAgents}/>
+    <DomaiForAgentsImageContainer image={domainForAgents}
+    onClick={() => {
+      window.open(
+        'https://agent.domain.com.au/domain-for-agents/',
+        '_blank'
+      );
+    }}/>
 
   );
 }
